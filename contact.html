@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Repartout66</title>
+<meta name="description" content="Contactez Repartout66 pour un dépannage informatique dans les Pyrénées-Orientales.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Repartout<span>66</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#prestations">Prestations</a>
+      <a href="pihole.html">Pi-Hole</a>
+      <a href="contact.html" class="is-active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container contact-wrap">
+  <div class="contact-info">
+    <h1>Parlons de votre problème</h1>
+    <p>Remplissez le formulaire avec le maximum de détails, je vous réponds rapidement pour convenir d'un rendez-vous ou d'une intervention à domicile.</p>
+
+    <div class="contact-detail">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg>
+      <div><strong>Téléphone</strong><a href="tel:+33604167355">06 04 16 73 55</a></div>
+    </div>
+
+    <div class="contact-detail">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+      <div><strong>Email</strong><a href="mailto:guillaume-marest@orange.fr">guillaume-marest@orange.fr</a></div>
+    </div>
+
+    <div class="contact-detail">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><strong>Zone d'intervention</strong><span>Pyrénées-Orientales (66)</span></div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <p class="form-success" id="form-success">Merci, votre demande a bien été envoyée ! Je reviens vers vous rapidement.</p>
+
+    <form id="contact-form" action="https://formspree.io/f/mrpbbzpk" method="POST">
+      <div class="form-row">
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="Nom" required>
+        </div>
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="Prénom" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ordinateur">Type d'ordinateur</label>
+        <select id="ordinateur" name="Type d'ordinateur" required>
+          <option value="" disabled selected>Choisissez une option</option>
+          <option>PC Windows</option>
+          <option>Mac</option>
+          <option>Linux</option>
+          <option>Je ne sais pas</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="probleme">Type de problème</label>
+        <select id="probleme" name="Type de problème" required>
+          <option value="" disabled selected>Choisissez une option</option>
+          <option>L'ordinateur ne démarre plus</option>
+          <option>Lenteur</option>
+          <option>Virus / logiciel malveillant</option>
+          <option>Écran cassé ou endommagé</option>
+          <option>Installation de logiciel</option>
+          <option>Récupération de données</option>
+          <option>Montage de PC</option>
+          <option>Installation Pi-Hole</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="description">Description (facultatif)</label>
+        <textarea id="description" name="Description" placeholder="Un détail utile ? Depuis quand ? Message d'erreur affiché ?"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="field">
+          <label for="telephone">Votre téléphone (facultatif)</label>
+          <input type="tel" id="telephone" name="Téléphone">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+      <p class="form-note">Vos informations ne servent qu'à vous recontacter pour votre dépannage.</p>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Repartout66</strong>
+      <p>Dépannage informatique pour particuliers — Pyrénées-Orientales (66)</p>
+      <p><a href="confidentialite.html">Confidentialité (RGPD)</a></p>
+    </div>
+    <div class="footer-contact">
+      <p>Téléphone : <a href="tel:+33604167355">06 04 16 73 55</a></p>
+      <p>Email : <a href="mailto:guillaume-marest@orange.fr">guillaume-marest@orange.fr</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        success.style.display = 'block';
+        form.reset();
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert("L'envoi a échoué. Vous pouvez aussi me contacter directement par téléphone ou email.");
+      }
+    } catch (err) {
+      alert("L'envoi a échoué. Vérifiez votre connexion, ou contactez-moi directement par téléphone ou email.");
+    }
+  });
+</script>
+
+</body>
+</html>

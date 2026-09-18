@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi-Hole : bloquez les pubs sur tout votre réseau — Repartout66</title>
+<meta name="description" content="Qu'est-ce qu'un Pi-Hole et à quoi ça sert ? Explication simple et service d'installation par Repartout66, dans le 66.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Repartout<span>66</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#prestations">Prestations</a>
+      <a href="pihole.html" class="is-active">Pi-Hole</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-tag" style="color:#7FE0B8">Le Pi-Hole, expliqué simplement</p>
+    <h1>Un petit boîtier qui bloque les pubs sur tout votre réseau</h1>
+    <p>Pas d'extension à installer sur chaque appareil, pas d'abonnement : le Pi-Hole protège tout ce qui se connecte à votre box, une bonne fois pour toutes.</p>
+  </div>
+</section>
+
+<section class="content-block">
+  <div class="container two-col">
+    <div>
+      <h2>Qu'est-ce que c'est ?</h2>
+      <p>Le Pi-Hole est un petit programme qui tourne sur un boîtier discret (un Raspberry Pi, à peine plus grand qu'une carte de crédit) branché chez vous. Il se place entre votre box internet et tous vos appareils : ordinateurs, téléphones, tablettes, télévision connectée...</p>
+      <p>Concrètement, dès qu'un appareil de la maison essaie de charger une publicité ou un traqueur, le Pi-Hole l'intercepte et l'empêche de s'afficher — avant même que la page ait fini de charger.</p>
+    </div>
+    <div class="diagram">
+      <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="20" width="80" height="50" rx="8" fill="#FFFFFF" stroke="#1D5EA8" stroke-width="2"/>
+        <text x="50" y="50" text-anchor="middle" font-family="IBM Plex Sans" font-size="12" fill="#0F2A44">Box</text>
+        <path d="M90 45h55" stroke="#1D5EA8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+        <rect x="150" y="10" width="90" height="70" rx="8" fill="#E4F5EC" stroke="#2FAF7D" stroke-width="2.5"/>
+        <text x="195" y="40" text-anchor="middle" font-family="IBM Plex Sans" font-weight="600" font-size="12" fill="#0F2A44">Pi-Hole</text>
+        <text x="195" y="58" text-anchor="middle" font-family="IBM Plex Sans" font-size="10" fill="#2FAF7D">filtre les pubs</text>
+        <path d="M195 80v25" stroke="#2FAF7D" stroke-width="2" fill="none" marker-end="url(#arrow-g)"/>
+        <path d="M150 130h-40M195 130v0M240 130h40" stroke="#1D5EA8" stroke-width="1.5" fill="none" opacity=".5"/>
+        <line x1="195" y1="105" x2="60" y2="150" stroke="#1D5EA8" stroke-width="1.5"/>
+        <line x1="195" y1="105" x2="195" y2="150" stroke="#1D5EA8" stroke-width="1.5"/>
+        <line x1="195" y1="105" x2="330" y2="150" stroke="#1D5EA8" stroke-width="1.5" opacity="0"/>
+        <line x1="195" y1="105" x2="260" y2="150" stroke="#1D5EA8" stroke-width="1.5"/>
+        <g font-family="IBM Plex Sans" font-size="10" fill="#556374">
+          <rect x="30" y="150" width="60" height="34" rx="6" fill="#FFFFFF" stroke="#DCE4EB"/>
+          <text x="60" y="171" text-anchor="middle">Ordinateur</text>
+          <rect x="165" y="150" width="60" height="34" rx="6" fill="#FFFFFF" stroke="#DCE4EB"/>
+          <text x="195" y="171" text-anchor="middle">Téléphone</text>
+          <rect x="230" y="150" width="60" height="34" rx="6" fill="#FFFFFF" stroke="#DCE4EB"/>
+          <text x="260" y="171" text-anchor="middle">Tablette</text>
+        </g>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#1D5EA8"/></marker>
+          <marker id="arrow-g" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#2FAF7D"/></marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="content-block">
+  <div class="container">
+    <h2>Ce que ça change au quotidien</h2>
+    <ul class="check-list" style="max-width:640px">
+      <li>Beaucoup moins de publicités, sur le web comme dans certaines applications mobiles.</li>
+      <li>Des pages qui se chargent plus vite, puisque tout ce qui est bloqué n'a plus besoin d'être téléchargé.</li>
+      <li>Moins de traqueurs publicitaires qui suivent votre navigation d'un site à l'autre.</li>
+      <li>Une protection qui s'applique automatiquement à tous les appareils connectés à la maison, sans rien installer sur chacun d'eux.</li>
+      <li>Un filtrage utile aussi pour les enfants, en bloquant certains domaines indésirables.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="content-block">
+  <div class="container two-col">
+    <div>
+      <h2>Ce que j'installe pour vous</h2>
+      <p>Je configure le boîtier, je le relie à votre box, je mets en place les listes de blocage adaptées à votre usage, et je vous montre comment le surveiller (ou pas, si vous préférez que ça reste invisible). L'ensemble tient dans un boîtier discret, sans bruit et sans entretien particulier.</p>
+    </div>
+    <div>
+      <h2>Pour qui ?</h2>
+      <p>Pour toute personne qui en a assez des publicités envahissantes, qui veut protéger la navigation de toute la famille, ou simplement gagner en confort au quotidien sur internet — sans compétence technique nécessaire de votre côté.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Envie d'un réseau sans publicité ?</h2>
+    <p>Je m'occupe de l'installation et de la configuration, vous n'avez rien à faire.</p>
+    <a href="contact.html" class="btn btn-primary">Demander l'installation</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Repartout66</strong>
+      <p>Dépannage informatique pour particuliers — Pyrénées-Orientales (66)</p>
+      <p><a href="confidentialite.html">Confidentialité (RGPD)</a></p>
+    </div>
+    <div class="footer-contact">
+      <p>Téléphone : <a href="tel:+33604167355">06 04 16 73 55</a></p>
+      <p>Email : <a href="mailto:guillaume-marest@orange.fr">guillaume-marest@orange.fr</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
